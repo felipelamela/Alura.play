@@ -1,0 +1,18 @@
+body {
+  background: rgb(11, 11, 11);
+  font-family: roboto;
+}
+
+h2 {
+  color: white;
+  font-size: 1.3rem;
+  margin: 0.9rem 0 0.2rem 0.9rem;
+  font-weight: 300;
+}
+
+p {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0.5rem 0 0 0.9rem;
+}
