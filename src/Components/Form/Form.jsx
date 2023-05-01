@@ -1,15 +1,15 @@
 import React from "react";
 import Button from "../Boxes/Button";
 import Input from "../Boxes/Input";
+import FormControl from "@mui/material/FormControl";
 
 const Form = () => {
   return (
-    <div>
-      <Input name="email" />
-      <Input name="email" />
-      <Input name="email" />
-      <Button  />
-    </div>
+    <FormControl sx={{width: "600px"}}>
+      <Input name="Nome" />
+      <Input name="Email" />
+      <Input name="Senha" />
+    </FormControl>
   );
 };
 

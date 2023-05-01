@@ -1,10 +1,10 @@
 import React from "react";
+import TextField from "@mui/material/TextField";
 
 const Input = ({ name }) => {
   return (
     <>
-      <label htmlFor={name}>{name}</label>
-      <input type="text" id={name} />
+      <TextField id={name} label={name} />
     </>
   );
 };

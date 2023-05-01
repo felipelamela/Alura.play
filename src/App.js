@@ -1,8 +1,14 @@
 import React from "react";
-import Form from "./Components/Form/Form";
+import Header from "./Components/Header/Header";
+import Main from "./Components/Main/Main";
 
 function App() {
-  return <Form />;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }
 
 export default App;

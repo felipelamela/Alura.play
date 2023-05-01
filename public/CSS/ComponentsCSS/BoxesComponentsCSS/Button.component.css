@@ -1,0 +1,9 @@
+.buttonNewContent{
+    display: inline;
+    align-self: center;
+    background: none;
+    padding: .6rem 1.2rem;
+    border: 1px solid rgb(213, 213, 213);
+    color: rgb(213, 213, 213);
+    cursor: pointer;
+}

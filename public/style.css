@@ -1,2 +1,9 @@
-@import url('./CSS/reset.css');
-@import url('./CSS/base.css');
+/* RESET CSS */
+@import url("./CSS/reset.css");
+@import url("./CSS/base.css");
+
+/* COMPONENTS CSS */
+@import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Img.component.css");
+@import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Button.component.css");
+@import url("./CSS/ComponentsCSS/MainComponentsCSS/Main.component.css");
+@import url("./CSS/ComponentsCSS/HeaderComponentsCSS/Header.component.css");
