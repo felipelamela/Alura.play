@@ -8,7 +8,8 @@ function App() {
       <Header />
       <Main />
       <Main />
-      <Main />
+
+
     </>
   );
 }

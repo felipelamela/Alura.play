@@ -1,4 +1,4 @@
-.buttonNewContent{
+.buttonNewContent {
     display: inline;
     align-self: center;
     background: none;
@@ -6,4 +6,29 @@
     border: 1px solid rgb(213, 213, 213);
     color: rgb(213, 213, 213);
     cursor: pointer;
+
+}
+
+.previous,
+.next {
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.315);
+    border: none;
+    font-size: 3rem;
+    opacity: 0;
+    top: 1px;
+    width: 60px;
+    height: 300px;
+
+}
+
+.next {
+    right: 1px;
+}
+
+
+.previous:hover,
+.next:hover {
+    opacity: 1;
 }
