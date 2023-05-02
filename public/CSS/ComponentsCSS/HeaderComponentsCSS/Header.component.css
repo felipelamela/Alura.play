@@ -1,7 +1,12 @@
-.headerContainer{
-    display: flex;
+.headerContainer {
     padding: 0 2rem;
-    justify-content: space-between;
     background-color: rgb(17, 17, 17);
     border-bottom: 2px solid rgb(193, 2, 2);
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
 }

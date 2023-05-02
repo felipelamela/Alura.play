@@ -1,13 +1,10 @@
 import React from "react";
 
-const mainContainer = document.querySelector(".mainContainer");
-
 function previous(event) {
-  mainContainer.scrollLeft -= 200;
-  console.log(mainContainer.scrollLeft);
+  event.target.nextElementSibling.scrollLeft -= 250;
 }
-function next() {
-  mainContainer.scrollLeft += 200;
+function next(event) {
+  event.target.previousSibling.scrollLeft += 250;
 }
 const Main = () => {
   return (
@@ -15,6 +12,14 @@ const Main = () => {
       <button onClick={previous} className="previous">
         &#10094;
       </button>
+
+      {/*Conteudo que ira receber objeto do video 
+        Titulo // Descrição(contendo limite de palavras no sub) // img
+        Criar um Array.map para gerar dinamicamente a quantidade de conteudo
+        Caso der tempo, limitar a quantidade de conteudo em 5 childrens e o sexto como
+        ver mais    
+      */}
+
       <div className="mainContainer">
         <div className="mainContainerContent">
           <div className="ImagemThumbnail"></div>
@@ -37,6 +42,8 @@ const Main = () => {
           <p>Hoje vamos abordar o tema sobre React</p>
         </div>
       </div>
+
+      {/* ------------------------------------------ */}
       <button onClick={next} className="next">
         &#10095;
       </button>
