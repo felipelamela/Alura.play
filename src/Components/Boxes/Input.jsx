@@ -1,12 +1,17 @@
 import React from "react";
 
-const Input = ({ name, ...props }) => {
+const Input = ({ name,value, ...props }) => {
+
+  const onDigit = (event) =>{
+    props.onChan(event.target.value);
+  }
+
   return (
     <>
       <label className="labelText" htmlFor={name}>
         {name}
       </label>
-      <input className="inputText" type="text" id={name} {...props} />
+      <input value={value} onChange={onDigit} className="inputText" type="text" id={name} {...props} />
     </>
   );
 };

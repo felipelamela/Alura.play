@@ -1,6 +1,10 @@
 import React from "react";
 
-const TextArea = () => {
+const TextArea = (props) => {
+  const onDigit = (event) => {
+    props.onChan(event.target.value);
+  };
+
   return (
     <>
       <label className="labelText" htmlFor="descricao">
@@ -9,6 +13,8 @@ const TextArea = () => {
       <textarea
         className="inputText"
         name="descricao"
+        value={props.description}
+        onChange={onDigit}
         id="descricao"
         cols="30"
         rows="10"

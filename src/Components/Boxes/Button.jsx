@@ -10,7 +10,7 @@ function handleClick(event) {
 const Button = ({ name, addNewContent, ...props }) => {
   return (
     <button
-      onClick={(event) => handleClick(event, addNewContent)}
+    
       className="buttonNewContent"
       style={{ margin: "1rem 0", alignSelf: "start" }}
     >
