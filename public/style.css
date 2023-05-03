@@ -5,5 +5,7 @@
 /* COMPONENTS CSS */
 @import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Img.component.css");
 @import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Button.component.css");
+@import url('./CSS/ComponentsCSS/BoxesComponentsCSS/Input.component.css');
 @import url("./CSS/ComponentsCSS/MainComponentsCSS/Main.component.css");
 @import url("./CSS/ComponentsCSS/HeaderComponentsCSS/Header.component.css");
+@import url('./CSS/ComponentsCSS/FormComponentsCSS/Form.component.css')

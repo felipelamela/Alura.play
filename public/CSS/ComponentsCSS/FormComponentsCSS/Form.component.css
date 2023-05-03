@@ -1,0 +1,11 @@
+.formNewContent {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 50px auto;
+}
+
+.formTitulo {
+  align-self: center;
+  font-size: 3rem;
+}

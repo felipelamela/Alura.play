@@ -1,10 +1,12 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
 
-const Input = ({ name }) => {
+const Input = ({ name, ...props }) => {
   return (
     <>
-      <TextField id={name} label={name} />
+      <label className="labelText" htmlFor={name}>
+        {name}
+      </label>
+      <input className="inputText" type="text" id={name} {...props} />
     </>
   );
 };

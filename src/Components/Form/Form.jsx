@@ -1,15 +1,19 @@
 import React from "react";
 import Button from "../Boxes/Button";
 import Input from "../Boxes/Input";
-import FormControl from "@mui/material/FormControl";
+import TextArea from "../Boxes/TextArea";
 
-const Form = () => {
+const Form = ({ addNewContent }) => {
   return (
-    <FormControl sx={{width: "600px"}}>
-      <Input name="Nome" />
-      <Input name="Email" />
-      <Input name="Senha" />
-    </FormControl>
+    <form className="formNewContent" action="">
+      <h2 className="formTitulo">Novo Vídeo</h2>
+      <Input name="Titulo" />
+      <Input name="Categoria" type="email" />
+      <Input name="URL - Video" />
+      <Input name="URL - Thumbnail" />
+      <TextArea />
+      <Button name="Cadastrar" />
+    </form>
   );
 };
 

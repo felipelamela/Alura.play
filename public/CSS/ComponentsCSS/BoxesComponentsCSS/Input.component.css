@@ -1,0 +1,21 @@
+.inputText {
+  font-size: 1.7rem;
+  padding: 1rem;
+  background: rgb(44, 44, 44);
+  color: white;
+  border: none;
+  border-bottom: 1px rgb(193, 2, 2) solid;
+  resize: none;
+  font-weight: 300;
+}
+
+.inputText:focus {
+  outline: none;
+}
+
+.labelText {
+  font-size: 1.6rem;
+  color: white;
+  padding: .9rem 0 .5rem;
+  margin: 2.5rem 0 0;
+}
