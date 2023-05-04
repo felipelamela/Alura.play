@@ -1,15 +1,6 @@
 import React from "react";
 import ButtonScroll from "../Boxes/ButtonScroll";
 
-function previous(event) {
-  console.log(event.target.nextElementSibling);
-  ;
-}
-function next(event) {
-  console.log(event);
-  event.target.previousSibling.scrollLeft += 250;
-}
-
 function gerarConteudo(conteudo, categoria) {
   if (conteudo.categoria === categoria) {
     return (
@@ -27,7 +18,12 @@ const Main = ({ content, categorias }) => {
     <main className="container">
       {categorias.map((categoria) => (
         <div key={categoria} className="mainContainerPrimary">
-          <h2>{categoria.nome}</h2>
+          <h2
+            className="category"
+            style={{ borderBottom: `2px solid ${categoria.cor}` }}
+          >
+            {categoria.nome}
+          </h2>
           <div className="mainContainer">
             <ButtonScroll name="❮" className="previous" />
             <div className="containerAllContent">

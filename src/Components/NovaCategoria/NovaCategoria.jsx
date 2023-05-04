@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const NovaCategoria = () => {
   return (
-    <div>NovaCategoria</div>
-  )
-}
+    <div>
 
-export default NovaCategoria
+    </div>
+  );
+};
+
+export default NovaCategoria;

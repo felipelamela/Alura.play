@@ -3,13 +3,14 @@ import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Form from "./Components/Form/Form";
 import Categoria from "./Components/Categoria/Categoria";
+import Destaques from "./Components/Destaques/Destaques";
 
 function App() {
   const [categorias, setCategorias] = React.useState([
-    { nome: "Back-End" },
-    { nome: `Front-End` },
-    { nome: `Mobile` },
-    { nome: `DevOps` },
+    { nome: "Back-End", cor: "#088A3C" },
+    { nome: `Front-End`, cor: "#1B69B6" },
+    { nome: `Mobile`, cor: "#DE6F0F" },
+    { nome: `DevOps`, cor: "#B6201B" },
   ]);
   const [content, setContent] = React.useState([
     {
@@ -190,10 +191,11 @@ function App() {
     addNewContent({ title, category, urlVideo, urlThumbnail, description });
   };
   // <Form aoSalvar={aoSalvar} />
-  // <Main content={content}/>
+  // <Main content={content} categorias={categorias} />
   return (
     <>
       <Header />
+      <Destaques content={content} categorias={categorias} />
       <Main content={content} categorias={categorias} />
     </>
   );

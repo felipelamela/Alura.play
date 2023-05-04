@@ -1,0 +1,21 @@
+.containerDestaque {
+  max-width: 1100px;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.imgDestaque {
+  max-width: 1100px;
+}
+
+.containerDestaqueDescricao {
+  position: absolute;
+  top: 300px;
+  left: 30px;
+}
+
+.categoriaDescricao {
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .2rem;
+}

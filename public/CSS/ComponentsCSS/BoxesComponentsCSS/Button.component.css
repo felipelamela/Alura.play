@@ -30,6 +30,19 @@
 
 }
 
+.next {
+    position: relative;
+    right: 30px;
+}
+
+.previous {
+
+    position: relative;
+    left: 30px;
+
+
+}
+
 .previous:hover,
 .next:hover {
     opacity: 1;
