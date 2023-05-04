@@ -2,13 +2,14 @@ import React from "react";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Form from "./Components/Form/Form";
+import Categoria from "./Components/Categoria/Categoria";
 
 function App() {
-  const [categoria, setCategoria] = React.useState([
-    `Back-End`,
-    `Front-End`,
-    `mobile`,
-    `DevOps`,
+  const [categorias, setCategorias] = React.useState([
+    { nome: "Back-End" },
+    { nome: `Front-End` },
+    { nome: `Mobile` },
+    { nome: `DevOps` },
   ]);
   const [content, setContent] = React.useState([
     {
@@ -27,7 +28,7 @@ function App() {
     },
     {
       titulo: `Back-End`,
-      categoria: `Back-End`,
+      categoria: `DevOps`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
       urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
       descricao: `jsdnaljsduohasd`,
@@ -41,7 +42,7 @@ function App() {
     },
     {
       titulo: `Back-End`,
-      categoria: `Back-End`,
+      categoria: `Mobile`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
       urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
       descricao: `jsdnaljsduohasd`,
@@ -84,10 +85,11 @@ function App() {
     addNewContent({ title, category, urlVideo, urlThumbnail, description });
   };
   // <Form aoSalvar={aoSalvar} />
+  // <Main content={content}/>
   return (
     <>
       <Header />
-      <Main content={content}/>
+      <Main content={content} categorias={categorias} />
     </>
   );
 }
