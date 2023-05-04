@@ -1,16 +1,19 @@
 import React from "react";
+import ButtonScroll from "../Boxes/ButtonScroll";
 
 function previous(event) {
-  event.target.nextElementSibling.scrollLeft -= 250;
+  console.log(event.target.nextElementSibling);
+  ;
 }
 function next(event) {
+  console.log(event);
   event.target.previousSibling.scrollLeft += 250;
 }
 
 function gerarConteudo(conteudo, categoria) {
-  if (conteudo === categoria) {
+  if (conteudo.categoria === categoria) {
     return (
-      <div key={conteudo.nome} className="mainContainerContent">
+      <div key={conteudo.nome} className="containerContent">
         <img className="ImagemThumbnail" src={conteudo.urlThumbnail} alt="" />
         <h2>{conteudo.titulo}</h2>
         <p>{conteudo.descricao}</p>
@@ -23,20 +26,17 @@ const Main = ({ content, categorias }) => {
   return (
     <main className="container">
       {categorias.map((categoria) => (
-        <div key={categoria} className="mainContainer">
+        <div key={categoria} className="mainContainerPrimary">
           <h2>{categoria.nome}</h2>
-          <button onClick={previous} className="previous">
-            &#10094;
-          </button>
           <div className="mainContainer">
-            {content.map((conteudo) =>
-              gerarConteudo(conteudo.categoria, categoria.nome)
-            )}
-            <div className="ImagemThumbnail"></div>
+            <ButtonScroll name="❮" className="previous" />
+            <div className="containerAllContent">
+              {content.map((conteudo) =>
+                gerarConteudo(conteudo, categoria.nome)
+              )}
+            </div>
+            <ButtonScroll name="❯" className="next" />
           </div>
-          <button onClick={next} className="next">
-            &#10095;
-          </button>
         </div>
       ))}
     </main>
