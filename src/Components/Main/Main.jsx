@@ -6,7 +6,7 @@ function previous(event) {
 function next(event) {
   event.target.previousSibling.scrollLeft += 250;
 }
-const Main = () => {
+const Main = ({ content }) => {
   return (
     <main className="container">
       <button onClick={previous} className="previous">
@@ -21,28 +21,21 @@ const Main = () => {
       */}
 
       <div className="mainContainer">
-        <div className="mainContainerContent">
+          {content.map((conteudo) => (
+            <div className="mainContainerContent">
+              <img
+                className="ImagemThumbnail"
+                src={conteudo.urlThumbnail}
+                alt=""
+              />
+              <h2>{conteudo.titulo}</h2>
+              <p>{conteudo.descricao}</p>
+            </div>
+          ))}
           <div className="ImagemThumbnail"></div>
-          <h2>O que é React</h2>
-          <p>Hoje vamos abordar o tema sobre React</p>
         </div>
-        <div className="mainContainerContent">
-          <div className="ImagemThumbnail"></div>
-          <h2>O que é React</h2>
-          <p>Hoje vamos abordar o tema sobre React</p>
-        </div>
-        <div className="mainContainerContent">
-          <div className="ImagemThumbnail"></div>
-          <h2>O que é React</h2>
-          <p>Hoje vamos abordar o tema sobre React</p>
-        </div>
-        <div className="mainContainerContent">
-          <div className="ImagemThumbnail"></div>
-          <h2>O que é React</h2>
-          <p>Hoje vamos abordar o tema sobre React</p>
-        </div>
-      </div>
 
+      {console.log(content)}
       {/* ------------------------------------------ */}
       <button onClick={next} className="next">
         &#10095;
@@ -52,3 +45,29 @@ const Main = () => {
 };
 
 export default Main;
+
+/*
+
+<div className="mainContainerContent">
+          <div className="ImagemThumbnail"></div>
+          <h2>O que é React</h2>
+          <p>Hoje vamos abordar o tema sobre React</p>
+        </div>
+        <div className="mainContainerContent">
+          <div className="ImagemThumbnail"></div>
+          <h2>O que é React</h2>
+          <p>Hoje vamos abordar o tema sobre React</p>
+        </div>
+        <div className="mainContainerContent">
+          <div className="ImagemThumbnail"></div>
+          <h2>O que é React</h2>
+          <p>Hoje vamos abordar o tema sobre React</p>
+        </div>
+        <div className="mainContainerContent">
+          <div className="ImagemThumbnail"></div>
+          <h2>O que é React</h2>
+          <p>Hoje vamos abordar o tema sobre React</p>
+        </div>
+
+
+*/

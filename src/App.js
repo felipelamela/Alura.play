@@ -16,9 +16,36 @@ function App() {
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
       urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
-      descricao:`jsdnaljsduohasd`
-    }
-
+      descricao: `jsdnaljsduohasd`,
+    },
+    {
+      titulo: `Back-End`,
+      categoria: `Back-End`,
+      urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
+      urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      descricao: `jsdnaljsduohasd`,
+    },
+    {
+      titulo: `Back-End`,
+      categoria: `Back-End`,
+      urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
+      urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      descricao: `jsdnaljsduohasd`,
+    },
+    {
+      titulo: `Back-End`,
+      categoria: `Back-End`,
+      urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
+      urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      descricao: `jsdnaljsduohasd`,
+    },
+    {
+      titulo: `Back-End`,
+      categoria: `Back-End`,
+      urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
+      urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
+      descricao: `jsdnaljsduohasd`,
+    },
   ]);
 
   const addNewContent = ({
@@ -28,36 +55,39 @@ function App() {
     urlThumbnail,
     description,
   }) => {
-    setContent({
-      titulo: title,
-      categoria: category,
-      urlVideo: urlVideo,
-      urlThumbnail: urlThumbnail,
-      descricao: description,
-    });
+    setContent([
+      ...content,
+      {
+        titulo: title,
+        categoria: category,
+        urlVideo: urlVideo,
+        urlThumbnail: urlThumbnail,
+        descricao: description,
+      },
+    ]);
   };
 
   const pagina = {
     "/": <Main />,
-    "/Formulario": <Form />,
+    "/NovoVideo": <Form />,
   };
 
-
-  const aoSalvar = (event, title, category, urlVideo, urlThumbnail, description) => {
+  const aoSalvar = (
+    event,
+    title,
+    category,
+    urlVideo,
+    urlThumbnail,
+    description
+  ) => {
     event.preventDefault();
-    addNewContent({title, category, urlVideo, urlThumbnail, description})
-    console.log(title);
-    console.log(category);
-    console.log(urlVideo);
-    console.log(urlThumbnail);
-    console.log(description);
+    addNewContent({ title, category, urlVideo, urlThumbnail, description });
   };
-
+  // <Form aoSalvar={aoSalvar} />
   return (
     <>
-    {console.log(content)}
       <Header />
-      <Form aoSalvar={aoSalvar}/>
+      <Main content={content}/>
     </>
   );
 }
