@@ -1,0 +1,19 @@
+.dropDownInput {
+  font-size: 1.7rem;
+  background: rgb(44, 44, 44);
+  color: white;
+  border: none;
+  border-bottom: 1px rgb(193, 2, 2) solid;
+  resize: none;
+  font-weight: 300;
+}
+
+.dropDownLabel {
+  font-size: 1.6rem;
+  color: white;
+  margin: .4rem 0 0;
+  background: rgb(44, 44, 44);
+  border: none;
+  padding: 1rem;
+  border-bottom: 1px rgb(193, 2, 2) solid
+}

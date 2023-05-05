@@ -2,7 +2,7 @@ import React from "react";
 
 const TextArea = (props) => {
   const onDigit = (event) => {
-    props.onChan(event.target.value);
+    props.novoValor(event.target.value);
   };
 
   return (

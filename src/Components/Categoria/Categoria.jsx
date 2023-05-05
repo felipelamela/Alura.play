@@ -9,7 +9,7 @@ const Categoria = ({categoria}) => {
 
 
       <p>ola mundo</p>
-      {console.log(categoria)}
+
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from "react";
 function handleClick(event) {
   const forme = document.querySelectorAll(".inputText");
   event.preventDefault();
-  console.log(forme[0].value);
+
 
 }
 

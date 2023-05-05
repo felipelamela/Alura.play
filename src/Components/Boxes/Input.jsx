@@ -2,7 +2,7 @@ import React from "react";
 
 const Input = ({ name, value, ...props }) => {
   const onDigit = (event) => {
-    props.onChan(event.target.value);
+    props.novoValor(event.target.value);
   };
 
   return (

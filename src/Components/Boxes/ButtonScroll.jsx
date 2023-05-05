@@ -2,11 +2,11 @@ import React from "react";
 
 function previous(event) {
   event.target.nextElementSibling.scrollLeft -= 250
-  console.log(event.target.nextElementSibling.scrollLeft);
+
 }
 function next(event) {
   event.target.previousSibling.scrollLeft += 250;
-  console.log(event.target.previousElementSibling);
+
 }
 
 function scrollDirection(event, direction) {
