@@ -1,11 +1,11 @@
 import React from "react";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
-import Form from "./Components/Form/Form";
 import Destaques from "./Components/Destaques/Destaques";
-import Remove from "./Components/Remove/Remove";
-import NewCategory from "./Components/NewCategory/NewCategory";
-import AdmArea from "./Components/AdmArea/AdmArea";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
@@ -214,38 +214,34 @@ function App() {
     addNewContent({ title, category, urlVideo, urlThumbnail, description });
   };
 
-  const paginas = {
-    "/": <Main />,
-    "/NovoVideo":<Form aoSalvar={aoSalvar} categorias={categorias} />,
-
-    "/EditarVideo":<Remove content={content} setContent={setContent} />,
-
-    "/NovaCategoria":  <NewCategory categorias={categorias} setCategorias={setCategorias} />,
-
-  };
-
   return (
-    <>
+    <Router>
       <Header />
-      <Destaques
-        idDestaque={destaque.id}
-        content={content}
-        categorias={categorias}
-      />
+      <Switch>
+        <Route exact path="/">
+          <Destaques
+            idDestaque={destaque.id}
+            content={content}
+            categorias={categorias}
+          />
 
-      <Main
-        setDestaque={setDestaque}
-        content={content}
-        categorias={categorias}
-      />
-      <Form aoSalvar={aoSalvar} categorias={categorias} />
-
-      <Remove content={content} setContent={setContent} />
-
-      <NewCategory categorias={categorias} setCategorias={setCategorias} />
-
-      <AdmArea paginas={paginas}/>
-    </>
+          <Main
+            setDestaque={setDestaque}
+            content={content}
+            categorias={categorias}
+          />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard
+            aoSalvar={aoSalvar}
+            categorias={categorias}
+            setCategorias={setCategorias}
+            content={content}
+            setContent={setContent}
+          />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

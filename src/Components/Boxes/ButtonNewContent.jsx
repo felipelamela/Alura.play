@@ -1,10 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 const ButtonNewContent = ({ name, ...props }) => {
   return (
-    <button className="buttonNewContent" {...props}>
+    <Link to='/dashboard' className="buttonNewContent" {...props}>
       {name}
-    </button>
+    </Link>
   );
 };
 
