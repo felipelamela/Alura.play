@@ -2,19 +2,12 @@ import React from "react";
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Form from "./Components/Form/Form";
-import Categoria from "./Components/Categoria/Categoria";
 import Destaques from "./Components/Destaques/Destaques";
-import nextId from "react-id-generator";
+import Remove from "./Components/Remove/Remove";
+import NewCategory from "./Components/NewCategory/NewCategory";
+import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const [destaque, setDestaque] = React.useState({
-    id: "id1",
-    titulo: `Back-End`,
-    categoria: `Back-End`,
-    urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
-    urlThumbnail: `https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg`,
-    descricao: `jsdnaljsduohasd`,
-  });
 
   const [categorias, setCategorias] = React.useState([
     { nome: "Back-End", cor: "#088A3C" },
@@ -25,7 +18,7 @@ function App() {
 
   const [content, setContent] = React.useState([
     {
-      id: "id1",
+      id: uuidv4(),
       titulo: `dadwdas`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -33,7 +26,7 @@ function App() {
       descricao: `jsdnaljsduoha sdjsdnaljsduohasdj sdnaljsduo hasdjsdnaljsduoh asdjsdnaljsduoha djsdnaljsduohasdjsdnaljsduohasdj sdnalj sduohasd`,
     },
     {
-      id: "id2",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -41,7 +34,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id3",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `DevOps`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -49,7 +42,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id4",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Front-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -57,7 +50,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id5",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Mobile`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -65,7 +58,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id6",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Front-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -73,7 +66,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id7",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Front-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -81,7 +74,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id8",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `DevOps`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -89,7 +82,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id9",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -97,7 +90,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id10",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Mobile`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -105,7 +98,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id11",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Front-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -113,7 +106,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id12",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -121,7 +114,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id13",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `DevOps`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -129,7 +122,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id14",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -137,7 +130,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id15",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Mobile`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -145,7 +138,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id16",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -153,7 +146,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id17",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -161,7 +154,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id18",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `DevOps`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -169,7 +162,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id19",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Back-End`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -177,7 +170,7 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
     {
-      id: "id20",
+      id: uuidv4(),
       titulo: `Back-End`,
       categoria: `Mobile`,
       urlVideo: `https://www.youtube.com/watch?v=dQw4w9WgXcQ`,
@@ -185,6 +178,8 @@ function App() {
       descricao: `jsdnaljsduohasd`,
     },
   ]);
+
+  const [destaque, setDestaque] = React.useState(content[0]);
 
   const addNewContent = ({
     id,
@@ -197,7 +192,7 @@ function App() {
     setContent([
       ...content,
       {
-        id: nextId(),
+        id: uuidv4(),
         titulo: title,
         categoria: category,
         urlVideo: urlVideo,
@@ -221,14 +216,12 @@ function App() {
     description
   ) => {
     event.preventDefault();
-    console.log(category);
     addNewContent({ title, category, urlVideo, urlThumbnail, description });
   };
-  // <Form aoSalvar={aoSalvar} />
-  // <Main content={content} categorias={categorias} />
 
   return (
     <>
+      {console.log(content)}
       <Header />
       <Destaques
         idDestaque={destaque.id}
@@ -242,6 +235,10 @@ function App() {
         categorias={categorias}
       />
       <Form aoSalvar={aoSalvar} categorias={categorias} />
+
+      <Remove content={content} setContent={setContent} />
+
+      <NewCategory categorias={categorias} setCategorias={setCategorias} />
     </>
   );
 }

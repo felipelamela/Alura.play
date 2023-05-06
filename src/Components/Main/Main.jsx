@@ -4,11 +4,11 @@ import ButtonScroll from "../Boxes/ButtonScroll";
 function gerarConteudo(conteudo, categoria) {
   if (conteudo.categoria === categoria) {
     return (
-      <>
+      <div id={conteudo.id} key={conteudo.id} className="containerContent">
         <img className="ImagemThumbnail" src={conteudo.urlThumbnail} alt="" />
         <h2 className="contentTitle">{conteudo.titulo}</h2>
         <p className="contentDescription">{conteudo.descricao}</p>
-      </>
+      </div>
     );
   }
 }
@@ -46,15 +46,9 @@ const Main = ({ content, categorias, setDestaque }) => {
               onClick={(event) => gerarDestaque(event, content, setDestaque)}
               className="containerAllContent"
             >
-              {content.map((conteudo) => (
-                <div
-                  id={conteudo.id}
-                  key={conteudo.id}
-                  className="containerContent"
-                >
-                  {gerarConteudo(conteudo, categoria.nome)}
-                </div>
-              ))}
+              {content.map((conteudo) =>
+                gerarConteudo(conteudo, categoria.nome)
+              )}
             </div>
             <ButtonScroll name="❯" className="next" />
           </div>

@@ -1,0 +1,22 @@
+.containerContentRemove {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px;
+}
+
+.idRemove {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  font-size: 2rem;
+}
+
+.tituloRemove {
+  grid-row: 1;
+  grid-column: 2;
+}
+.descricaoRemove {
+  grid-column: 2;
+  grid-row: 3;
+}
+.containerBotao {
+  grid-column: -1;
+}

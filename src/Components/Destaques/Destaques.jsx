@@ -26,7 +26,8 @@ const Destaques = ({ content, categorias, idDestaque }) => {
   let corDestaque = corDescricao(conteudo, categorias);
   return (
     <div className="containerDestaque">
-      <img className="imgDestaque" src={conteudo.urlThumbnail} />
+      {console.log(content)}
+      <img className="imgDestaque" src={conteudo.urlThumbnail} alt="img" />
       <div
         className="containerDestaqueStyle"
         style={{ background: `${corDestaque}27` }}
@@ -48,3 +49,7 @@ const Destaques = ({ content, categorias, idDestaque }) => {
 };
 
 export default Destaques;
+
+//linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)
+
+//{ background: `${corDestaque}27` }
