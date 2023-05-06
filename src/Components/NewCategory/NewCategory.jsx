@@ -18,9 +18,13 @@ const NewCategory = ({ categorias, setCategorias }) => {
 
   return (
     <div>
-      <form onSubmit={(event) => createNewCategory(event)}>
+      <form
+        className="formNewContent"
+        onSubmit={(event) => createNewCategory(event)}
+      >
+        <h2 className="formTitulo">Nova Categoria</h2>
         <InputNewCategory
-          name="Nova Categoria"
+          name="Nome"
           value={nomeCategoria}
           novoDado={(value) => setNomeCategoria(value)}
         />
@@ -29,8 +33,11 @@ const NewCategory = ({ categorias, setCategorias }) => {
           value={corCategoria}
           type="color"
           novoDado={(value) => setCorCategoria(value)}
+          className="inputCor"
         />
-        <button>Cadastrar</button>
+        <button className="buttonNewContent newCategoryButton">
+          Cadastrar
+        </button>
       </form>
     </div>
   );

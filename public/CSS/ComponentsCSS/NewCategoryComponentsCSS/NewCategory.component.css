@@ -1,0 +1,19 @@
+.formNewCategory {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.inputCor {
+  width: 300px;
+  max-width: 900px;
+  height: 30px;
+  margin: 0 0 1rem 0;
+  background: rgb(44, 44, 44);
+  border: none;
+}
+.NewCategory {
+    margin: 1rem 0 0 0;
+}
+
+.newCategoryButton{
+    align-self: flex-start;
+}

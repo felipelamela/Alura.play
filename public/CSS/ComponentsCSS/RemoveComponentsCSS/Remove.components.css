@@ -2,28 +2,46 @@
   max-width: 1100px;
   margin: 0 auto;
 }
+.containerEsquerdo {
+  display: flex;
+}
+.idRemove {
+  padding: 1rem;
+  width: 10px;
+  height: 10px;
+}
 .containerContentRemove {
   display: flex;
   align-items: center;
   background: #333;
-  padding: .3rem;
-  margin: .1rem;
-
+  padding: 0.3rem;
+  margin: 0.1rem;
+  justify-content: space-between;
 }
 
 .botaoRemove,
 .botaoEdit {
   align-self: center;
   font-size: 2rem;
-  padding: 0 .5rem ;
+  padding: 0 0.5rem;
   background: rgb(116, 114, 114);
   color: white;
   border: none;
-  margin: .2rem;
+  margin: 0.2rem;
   border-radius: 5px;
-  cursor: pointer
+  cursor: pointer;
 }
 
-.botaoRemove{
+.botaoRemove {
   color: rgb(187, 47, 47);
+}
+
+.tituloRemove, .descricaoRemove{
+  margin: 0;
+}
+.tituloRemove{
+  padding: 0 0 .2rem 0;
+}
+.containerDescricao{
+  padding: .5rem;
 }

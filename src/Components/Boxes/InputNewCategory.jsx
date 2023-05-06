@@ -7,10 +7,17 @@ const InputNewCategory = ({ name, novoDado, value, ...props }) => {
 
   return (
     <>
-      <label className="labelText" htmlFor={name}>
+      <label className="labelText NewCategory" htmlFor={name}>
         {name}
       </label>
-      <input value={value} onChange={digit} type="text" id={name} {...props} />
+      <input
+        className="inputText"
+        value={value}
+        onChange={digit}
+        type="text"
+        id={name}
+        {...props}
+      />
     </>
   );
 };

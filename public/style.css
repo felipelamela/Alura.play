@@ -5,11 +5,12 @@
 /* COMPONENTS CSS */
 @import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Img.component.css");
 @import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Button.component.css");
-@import url('./CSS/ComponentsCSS/BoxesComponentsCSS/Input.component.css');
-@import url('./CSS/ComponentsCSS/BoxesComponentsCSS/Category.component.css');
-@import url('./CSS/ComponentsCSS/DestaquesComponentsCSS/Destaques.component.css');
-@import url('./CSS/ComponentsCSS/BoxesComponentsCSS/Dropdown.component.css');
+@import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Input.component.css");
+@import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Category.component.css");
+@import url("./CSS/ComponentsCSS/DestaquesComponentsCSS/Destaques.component.css");
+@import url("./CSS/ComponentsCSS/BoxesComponentsCSS/Dropdown.component.css");
 @import url("./CSS/ComponentsCSS/MainComponentsCSS/Main.component.css");
+@import url("./CSS/ComponentsCSS/NewCategoryComponentsCSS/NewCategory.component.css");
 @import url("./CSS/ComponentsCSS/HeaderComponentsCSS/Header.component.css");
 @import url("./CSS/ComponentsCSS/RemoveComponentsCSS/Remove.components.css");
-@import url('./CSS/ComponentsCSS/FormComponentsCSS/Form.component.css')
+@import url("./CSS/ComponentsCSS/FormComponentsCSS/Form.component.css");
