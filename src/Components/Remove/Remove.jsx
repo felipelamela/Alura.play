@@ -7,26 +7,28 @@ const Remove = ({ content, setContent }) => {
       event.target.parentNode.parentNode.getAttribute("name");
     const result = content.filter((content) => content.id !== elementoClicado);
     setContent(result);
-    console.log(content.id);
   };
   return (
     <section>
       <div className="containerRemove">
-        {content.map((content) => (
+        {content.map((content, index) => (
           <div
             key={content.id}
             name={content.id}
             className="containerContentRemove"
           >
             <h1 style={{ color: `white` }} className="idRemove">
-              {content.id}
+              {index + 1}
             </h1>
-            <h2 style={{ color: `white` }} className="tituloRemove">
-              {content.titulo}
-            </h2>
-            <p style={{ color: `white` }} className="descricaoRemove">
-              {content.descricao}
-            </p>
+            <div>
+              <h2 style={{ color: `white` }} className="tituloRemove">
+                {content.titulo}
+              </h2>
+              <p style={{ color: `white` }} className="descricaoRemove">
+                {content.descricao}
+              </p>
+            </div>
+
             <div className="containerBotao">
               <button className="botaoRemove" onClick={remove}>
                 X
