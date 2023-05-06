@@ -5,10 +5,10 @@ import Form from "./Components/Form/Form";
 import Destaques from "./Components/Destaques/Destaques";
 import Remove from "./Components/Remove/Remove";
 import NewCategory from "./Components/NewCategory/NewCategory";
+import AdmArea from "./Components/AdmArea/AdmArea";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
-
   const [categorias, setCategorias] = React.useState([
     { nome: "Back-End", cor: "#088A3C" },
     { nome: `Front-End`, cor: "#1B69B6" },
@@ -202,11 +202,6 @@ function App() {
     ]);
   };
 
-  const pagina = {
-    "/": <Main />,
-    "/NovoVideo": <Form />,
-  };
-
   const aoSalvar = (
     event,
     title,
@@ -219,9 +214,18 @@ function App() {
     addNewContent({ title, category, urlVideo, urlThumbnail, description });
   };
 
+  const paginas = {
+    "/": <Main />,
+    "/NovoVideo":<Form aoSalvar={aoSalvar} categorias={categorias} />,
+
+    "/EditarVideo":<Remove content={content} setContent={setContent} />,
+
+    "/NovaCategoria":  <NewCategory categorias={categorias} setCategorias={setCategorias} />,
+
+  };
+
   return (
     <>
-      {console.log(content)}
       <Header />
       <Destaques
         idDestaque={destaque.id}
@@ -239,6 +243,8 @@ function App() {
       <Remove content={content} setContent={setContent} />
 
       <NewCategory categorias={categorias} setCategorias={setCategorias} />
+
+      <AdmArea paginas={paginas}/>
     </>
   );
 }

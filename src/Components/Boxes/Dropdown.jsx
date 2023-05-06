@@ -2,7 +2,6 @@ import React from "react";
 
 const Dropdown = ({ name, categorias, ...props }) => {
   const onDigit = (event) => {
-    console.log(event.target.value);
     props.novoValor(event.target.value);
   };
   return (

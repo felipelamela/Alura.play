@@ -26,7 +26,6 @@ const Destaques = ({ content, categorias, idDestaque }) => {
   let corDestaque = corDescricao(conteudo, categorias);
   return (
     <div className="containerDestaque">
-      {console.log(content)}
       <img className="imgDestaque" src={conteudo.urlThumbnail} alt="img" />
       <div
         className="containerDestaqueStyle"

@@ -2,7 +2,6 @@ import React from "react";
 
 const Remove = ({ content, setContent }) => {
   const remove = (event) => {
-    console.log(content);
     const elementoClicado =
       event.target.parentNode.parentNode.getAttribute("name");
     const result = content.filter((content) => content.id !== elementoClicado);
