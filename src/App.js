@@ -1,14 +1,19 @@
 import React from "react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 import Header from "./Components/Header/Header";
 import Main from "./Components/Main/Main";
 import Destaques from "./Components/Destaques/Destaques";
 import Dashboard from "./Components/Dashboard/Dashboard";
-import { v4 as uuidv4 } from "uuid";
+import Login from "./Components/Login/Login";
 
 function App() {
+  const [usuario, setUsuario] = React.useState({
+    nome: "Admin",
+    senha: "123456",
+  })
   const [categorias, setCategorias] = React.useState([
     { nome: "Back-End", cor: "#088A3C" },
     { nome: `Front-End`, cor: "#1B69B6" },
@@ -217,6 +222,7 @@ function App() {
   return (
     <Router>
       <Header />
+      <Login usuario={usuario}/>
       <Switch>
         <Route exact path="/">
           <Destaques

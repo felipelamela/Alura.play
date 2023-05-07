@@ -20,17 +20,20 @@ const Main = ({ content, categorias, setDestaque }) => {
 
   return (
     <main className="container">
-      {categorias.map((categoria) => (
-        <Categoria
-          key={categoria.cor}
-          categoria={categoria}
-          gerarDestaque={gerarDestaque}
-          content={content.filter(
-            (conteudo) => conteudo.categoria === categoria.nome
-          )}
-          setDestaque={setDestaque}
-        />
-      ))}
+      {categorias.map(
+        (categoria) =>
+          content.length > 0 && (
+            <Categoria
+              key={categoria.cor}
+              categoria={categoria}
+              gerarDestaque={gerarDestaque}
+              content={content.filter(
+                (conteudo) => conteudo.categoria === categoria.nome
+              )}
+              setDestaque={setDestaque}
+            />
+          )
+      )}
     </main>
   );
 };

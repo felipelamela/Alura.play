@@ -14,7 +14,3 @@ const Header = () => {
 };
 
 export default Header;
-/*
-
-className="buttonNewContent"
- */
