@@ -45,3 +45,9 @@
 .containerDescricao{
   padding: .5rem;
 }
+.containerBotao{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  max-width: 120px;
+}

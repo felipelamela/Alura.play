@@ -16,6 +16,7 @@ function conteudoDestaque(content, idDestaque) {
   content.forEach((conteudo) => {
     if (conteudo.id === idDestaque) {
       contentDestaque = conteudo;
+      window.scrollTo({ top: 80, behavior: "smooth" });
     }
   });
   return contentDestaque;
@@ -29,7 +30,7 @@ const Destaques = ({ content, categorias, idDestaque }) => {
       <img className="imgDestaque" src={conteudo.urlThumbnail} alt="img" />
       <div
         className="containerDestaqueStyle"
-        style={{ background: `${corDestaque}27` }}
+
       >
         <div className="containerDestaqueDescricao">
           <p
@@ -48,7 +49,3 @@ const Destaques = ({ content, categorias, idDestaque }) => {
 };
 
 export default Destaques;
-
-//linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%)
-
-//{ background: `${corDestaque}27` }

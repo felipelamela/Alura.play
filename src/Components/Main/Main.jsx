@@ -1,39 +1,45 @@
 import React from "react";
-import ButtonScroll from "../Boxes/ButtonScroll";
-
-function gerarConteudo(conteudo, categoria) {
-  if (conteudo.categoria === categoria) {
-    return (
-      <div id={conteudo.id} key={conteudo.id} className="containerContent">
-        <img className="ImagemThumbnail" src={conteudo.urlThumbnail} alt="" />
-        <h2 className="contentTitle">{conteudo.titulo}</h2>
-        <p className="contentDescription">{conteudo.descricao}</p>
-      </div>
-    );
-  }
-}
-
-function gerarDestaque(event, content, setDestaque) {
-  const id = event.target.parentNode.id;
-  content.forEach((conteudo) => {
-    if (conteudo.id === id) {
-      setDestaque({
-        id: conteudo.id,
-        titulo: conteudo.titulo,
-        categoria: conteudo.categoria,
-        urlVideo: conteudo.urlVideo,
-        urlThumbnail: conteudo.urlThumbnail,
-        descricao: conteudo.descricao,
-      });
-    }
-  });
-}
+import Categoria from "../Categoria/Categoria";
 
 const Main = ({ content, categorias, setDestaque }) => {
+  function gerarDestaque(event, content, setDestaque) {
+    const id = event.target.parentNode.id;
+    content.forEach((conteudo) => {
+      if (conteudo.id === id) {
+        setDestaque({
+          id: conteudo.id,
+          titulo: conteudo.titulo,
+          categoria: conteudo.categoria,
+          urlVideo: conteudo.urlVideo,
+          urlThumbnail: conteudo.urlThumbnail,
+          descricao: conteudo.descricao,
+        });
+      }
+    });
+  }
+
   return (
     <main className="container">
       {categorias.map((categoria) => (
-        <div key={categoria.name} className="mainContainerPrimary">
+        <Categoria
+          key={categoria.cor}
+          categoria={categoria}
+          gerarDestaque={gerarDestaque}
+          content={content.filter(
+            (conteudo) => conteudo.categoria === categoria.nome
+          )}
+          setDestaque={setDestaque}
+        />
+      ))}
+    </main>
+  );
+};
+
+export default Main;
+
+/*
+
+<div key={categoria.name} className="mainContainerPrimary">
           <h2
             className="category"
             style={{ borderBottom: `2px solid ${categoria.cor}` }}
@@ -54,8 +60,6 @@ const Main = ({ content, categorias, setDestaque }) => {
           </div>
         </div>
       ))}
-    </main>
-  );
-};
 
-export default Main;
+
+*/

@@ -1,0 +1,26 @@
+.containerDashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  margin: 3rem 0;
+  gap: 1rem;
+}
+.containerDashboardEsquerdo {
+  display: grid;
+  max-height: 160px;
+  background-color: rgb(59, 59, 59);
+  text-decoration: none;
+}
+.containerDashboardEsquerdo a {
+  text-decoration: none;
+}
+
+.DashEsquerdoConteudo {
+  padding: 1rem;
+  border-bottom: 1px solid red;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.DashEsquerdoConteudo:hover {
+  background-color: rgb(21, 21, 21);
+}

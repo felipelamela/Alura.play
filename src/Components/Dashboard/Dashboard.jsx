@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
+
 import NewCategory from "../NewCategory/NewCategory";
 import Form from "../Form/Form";
 import Remove from "../Remove/Remove";
@@ -12,16 +14,38 @@ const Dashboard = ({
   setContent,
 }) => {
   return (
-    <section>
-      <button>Nova Categoria</button>
-      <button>Conteúdo</button>
-      <button>Novo Conteudo</button>
+    <section className="containerDashboard">
+      <Router>
+        <div className="containerDashboardEsquerdo">
+          <Link className="DashEsquerdoConteudo" to="/dashboard/Conteudo">
+            Conteúdo
+          </Link>
 
-      <Form aoSalvar={aoSalvar} categorias={categorias} />
+          <Link className="DashEsquerdoConteudo" to="/dashboard/NovaCategoria">
+            Nova Categoria
+          </Link>
 
-      <Remove content={content} setContent={setContent} />
-
-      <NewCategory categorias={categorias} setCategorias={setCategorias} />
+          <Link className="DashEsquerdoConteudo" to="/dashboard/NovoConteudo">
+            Novo Conteúdo
+          </Link>
+        </div>
+        <div className="containerDashboardDireito">
+          <Switch>
+            <Route path="/dashboard/NovaCategoria">
+              <NewCategory
+                categorias={categorias}
+                setCategorias={setCategorias}
+              />
+            </Route>
+            <Route path="/dashboard/NovoConteudo">
+              <Form aoSalvar={aoSalvar} categorias={categorias} />
+            </Route>
+            <Router exact path="/dashboard/Conteudo">
+              <Remove content={content} setContent={setContent} />
+            </Router>
+          </Switch>
+        </div>
+      </Router>
     </section>
   );
 };
