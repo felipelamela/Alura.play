@@ -10,12 +10,16 @@ import Dashboard from "./Components/Dashboard/Dashboard";
 import Login from "./Components/Login/Login";
 
 function App() {
+  let logado =  {usuario: false}
+  localStorage.setItem('logado', JSON.stringify(logado))
+
+  let pessoaString = JSON.parse(localStorage.getItem('pessoa'))
   const [usuario, setUsuario] = React.useState({
     nome: "Felipe",
     login: `admin@admin.com`,
     senha: "123456",
   });
-  const [userLog, setUserLog] = React.useState(false);
+  const [userLog, setUserLog] = React.useState();
   const [categorias, setCategorias] = React.useState([
     { nome: "Back-End", cor: "#088A3C", total: 1 },
     { nome: `Front-End`, cor: "#1B69B6", total: 1 },
@@ -223,6 +227,7 @@ function App() {
 
   return (
     <Router>
+      {console.log(pessoaString)}
       <Header userLog={userLog} usuario={usuario} setUserLog={setUserLog} />
       <Switch>
         <Route exact path="/">

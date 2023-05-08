@@ -11,7 +11,8 @@ const Header = ({ userLog, setUserLog, usuario }) => {
   return (
     <header className="headerContainer">
       <div className="headerContent">
-        <Logo setUserLog={setUserLog} />
+        {console.log(userLog)}
+        <Logo/>
         {BotaoLogin}
       </div>
     </header>
