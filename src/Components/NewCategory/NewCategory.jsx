@@ -12,6 +12,7 @@ const NewCategory = ({ categorias, setCategorias }) => {
       {
         nome: nomeCategoria,
         cor: corCategoria,
+        total: 0
       },
     ]);
   };

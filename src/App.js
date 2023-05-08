@@ -11,14 +11,14 @@ import Login from "./Components/Login/Login";
 
 function App() {
   const [usuario, setUsuario] = React.useState({
-    nome: "Admin",
+    nome: "admin@admin.com",
     senha: "123456",
   })
   const [categorias, setCategorias] = React.useState([
-    { nome: "Back-End", cor: "#088A3C" },
-    { nome: `Front-End`, cor: "#1B69B6" },
-    { nome: `Mobile`, cor: "#DE6F0F" },
-    { nome: `DevOps`, cor: "#B6201B" },
+    { nome: "Back-End", cor: "#088A3C", total: 1 },
+    { nome: `Front-End`, cor: "#1B69B6", total: 1 },
+    { nome: `Mobile`, cor: "#DE6F0F", total: 1 },
+    { nome: `DevOps`, cor: "#B6201B", total: 1 },
   ]);
 
   const [content, setContent] = React.useState([

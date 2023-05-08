@@ -38,7 +38,7 @@ const Dashboard = ({
               />
             </Route>
             <Route path="/dashboard/NovoConteudo">
-              <Form aoSalvar={aoSalvar} categorias={categorias} />
+              <Form aoSalvar={aoSalvar} categorias={categorias} setCategorias={setCategorias} />
             </Route>
             <Router exact path="/dashboard/Conteudo">
               <Remove content={content} setContent={setContent} />

@@ -11,17 +11,21 @@
   cursor: pointer;
 }
 .buttonLogin {
+  margin: 1rem;
+  display: inline;
   font-size: 1.6rem;
   background-color: rgb(175, 0, 0);
   color: white;
+  justify-self: flex-start;
   text-decoration: none;
   align-self: center;
-  padding: .5rem 1rem;
-  border-radius: .3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
 }
 
-.buttonLogin:active{
-    background-color: rgb(138, 0, 0);
+.buttonLogin:active {
+  background-color: rgb(138, 0, 0);
 }
 
 .buttonNewContent:hover {
