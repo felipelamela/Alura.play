@@ -10,10 +10,11 @@
   color: rgb(213, 213, 213);
   cursor: pointer;
 }
+
 .buttonLogin {
   margin: 1rem;
   display: inline;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   background-color: rgb(175, 0, 0);
   color: white;
   justify-self: flex-start;

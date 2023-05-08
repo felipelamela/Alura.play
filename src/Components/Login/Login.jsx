@@ -1,8 +1,7 @@
 import React from "react";
-import Remove from "../Remove/Remove"
+import Remove from "../Remove/Remove";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 
 const Login = ({ setUserLog, usuario, setUsuario }) => {
   const [login, setLogin] = React.useState(``);
@@ -14,7 +13,7 @@ const Login = ({ setUserLog, usuario, setUsuario }) => {
     const confirmaSenha = usuario.senha === password;
 
     if (confirmaUsuario && confirmaSenha) {
-      window.location.href = "/dashboard/Conteudo"
+      window.location.href = "/dashboard/Conteudo";
     }
   };
 

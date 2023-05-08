@@ -1,6 +1,10 @@
 import React from "react";
 
-const Remove = ({ content, setContent }) => {
+const Remove = ({ content, setContent, setUserLog }) => {
+  const logar = () => {
+    return setUserLog(true);
+  };
+
   const remove = (event) => {
     const elementoClicado =
       event.target.parentNode.parentNode.getAttribute("name");
@@ -9,6 +13,8 @@ const Remove = ({ content, setContent }) => {
   };
   return (
     <section>
+      {logar()}
+
       <div className="containerRemove">
         {content.map((content, index) => (
           <div

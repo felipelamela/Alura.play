@@ -6,16 +6,18 @@ import Form from "../Form/Form";
 import Remove from "../Remove/Remove";
 
 const Dashboard = ({
-  paginas,
+  userLog,
   aoSalvar,
   categorias,
   setCategorias,
   content,
   setContent,
+  setUserLog,
 }) => {
   return (
     <section className="containerDashboard">
       <Router>
+        {console.log(userLog)}
         <div className="containerDashboardEsquerdo">
           <Link className="DashEsquerdoConteudo" to="/dashboard/Conteudo">
             Conteúdo
@@ -38,10 +40,18 @@ const Dashboard = ({
               />
             </Route>
             <Route path="/dashboard/NovoConteudo">
-              <Form aoSalvar={aoSalvar} categorias={categorias} setCategorias={setCategorias} />
+              <Form
+                aoSalvar={aoSalvar}
+                categorias={categorias}
+                setCategorias={setCategorias}
+              />
             </Route>
             <Router exact path="/dashboard/Conteudo">
-              <Remove content={content} setContent={setContent} />
+              <Remove
+                setUserLog={setUserLog}
+                content={content}
+                setContent={setContent}
+              />
             </Router>
           </Switch>
         </div>
