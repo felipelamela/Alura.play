@@ -1,17 +1,24 @@
 import React from "react";
 
-const Login = ({ usuario }) => {
+const Login = ({ setUserLog, usuario, setUsuario }) => {
   const [login, setLogin] = React.useState(``);
   const [password, setPassword] = React.useState(``);
 
   const confirmation = (event, usuario) => {
     event.preventDefault();
+    const confirmaUsuario = usuario.login === login;
+    const confirmaSenha = usuario.senha === password;
+
+    if (confirmaUsuario && confirmaSenha) {
+      window.location.href = "/dashboard/Conteudo";
+      setUserLog(true);
+    }
   };
 
   return (
     <>
       <form
-        onSubmit={(event) => confirmation(event)}
+        onSubmit={(event) => confirmation(event, usuario, login, password)}
         className="formNewContent "
         action=""
       >
@@ -27,12 +34,13 @@ const Login = ({ usuario }) => {
           onChange={(event) => setLogin(event.target.value)}
         />
 
-        <label className="labelText" htmlFor="login">
+        <label className="labelText" htmlFor="password">
           Senha
         </label>
         <input
+          className="inputText"
           type="password"
-          id="login"
+          id="password"
           value={password}
           onChange={(event) => setPassword(event.target.value)}
         />

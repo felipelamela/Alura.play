@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Link to="/">
-      <img src="img/Alura.png" className="ImagemLogo" alt="" />
+    <Link to="/" className="logo">
+      <p className="logoText">ALURA.PLAY <span className="logoSpan">▶</span></p>
     </Link>
   );
 };

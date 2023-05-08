@@ -11,9 +11,11 @@ import Login from "./Components/Login/Login";
 
 function App() {
   const [usuario, setUsuario] = React.useState({
-    nome: "admin@admin.com",
+    nome: "Felipe",
+    login: `admin@admin.com`,
     senha: "123456",
-  })
+  });
+  const [userLog, setUserLog] = React.useState(false);
   const [categorias, setCategorias] = React.useState([
     { nome: "Back-End", cor: "#088A3C", total: 1 },
     { nome: `Front-End`, cor: "#1B69B6", total: 1 },
@@ -221,8 +223,7 @@ function App() {
 
   return (
     <Router>
-      <Header />
-      <Login usuario={usuario}/>
+      <Header userLog={userLog} usuario={usuario} setUserLog={setUserLog} />
       <Switch>
         <Route exact path="/">
           <Destaques
@@ -237,6 +238,15 @@ function App() {
             categorias={categorias}
           />
         </Route>
+        <Route path="/login">
+          <Login
+            usuario={usuario}
+            setUsuario={setUsuario}
+            userLog={userLog}
+            setUserLog={setUserLog}
+          />
+        </Route>
+
         <Route path="/dashboard">
           <Dashboard
             aoSalvar={aoSalvar}

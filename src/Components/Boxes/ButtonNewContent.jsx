@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const ButtonNewContent = ({ name, ...props }) => {
+const ButtonNewContent = ({ name,rota, ...props }) => {
   return (
-    <Link to="/dashboard/Conteudo" className="buttonLogin" {...props}>
+    <Link to={rota} className="buttonLogin" {...props}>
       {name}
     </Link>
   );
